@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Signup/Login</title>
+  <style>
+    body{
+        background-color: #b3e0eb;
+    }
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      
+    }
+
+    .form-container {
+  width: 300px;
+  height: 300px;
+  padding: 30px;
+  border: 5px solid #046087; /* Set the thickness and color of the border */
+  border-radius: 10px; /* Optional: Rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+    }
+
+    h2 {
+      text-align: center;
+    }
+
+    input {
+      width: 92%;
+      height: auto;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #056eb9;
+      border-radius: 10px;
+      border-spacing: 15px;
+    }
+
+    button {
+      background-color: #0e50c3;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #06809f;
+    }
+
+    a {
+      text-decoration: none;
+      color: #007bff;
+    }
+    form{
+        align-items:center;
+        align-content: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="form-container">
+      <h2 id="form-title">Signup</h2>
+      <form id="auth-form">
+        <input type="text" id="username" placeholder="Username" required>
+        <input type="email" id="email" placeholder="Email" required>
+        <input type="password" id="password" placeholder="Password" required>
+        <button type="submit" id="submit-btn">Signup</button>
+      </form>
+      <p id="toggle-text">Already have an account? <a href="#" id="toggle-link">Login</a></p>
+    </div>
+  </div>
+
+  <script>
+    const authForm = document.getElementById('auth-form');
+    const formTitle = document.getElementById('form-title');
+    const toggleLink = document.getElementById('toggle-link');
+    const toggleText = document.getElementById('toggle-text');
+    const usernameInput = document.getElementById('username');
+    const emailInput = document.getElementById('email');
+    const passwordInput = document.getElementById('password');
+    const submitBtn = document.getElementById('submit-btn');
+
+    let isSignup = true;
+
+    authForm.addEventListener('submit', (event) => {
+      event.preventDefault();
+      if (isSignup) {
+        console.log('Signup form submitted');
+        // Handle signup logic here
+      } else {
+        console.log('Login form submitted');
+        // Handle login logic here
+      }
+    });
+
+    toggleLink.addEventListener('click', () => {
+      if (isSignup) {
+        formTitle.textContent = 'Login';
+        emailInput.style.display = 'none'; // Hide email field for login
+        submitBtn.textContent = 'Login';
+        toggleText.innerHTML = 'Don\'t have an account? <a href="#" id="toggle-link">Signup</a>';
+      } else {
+        formTitle.textContent = 'Signup';
+        emailInput.style.display = 'block'; // Show email field for signup
+        submitBtn.textContent = 'Signup';
+        toggleText.innerHTML = 'Already have an account? <a href="#" id="toggle-link">Login</a>';
+      }
+      isSignup = !isSignup;
+    });
+  </script>
+</body>
+</html>

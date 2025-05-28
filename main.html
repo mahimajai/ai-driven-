@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Page</title>
+    <style>
+        /* Basic styling for header and navigation buttons */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #d4f5fb;
+        }
+        
+        header {
+            background-color: #02252d;
+            padding: 50px;
+            text-align: center;
+            position: relative;
+        }
+
+        header h1 {
+            color: #fff;
+            margin: 0;
+        }
+
+        header .logo {
+    width: 140px; /* Increased width for a larger logo */
+    height: 120px; /* Make the height equal to the width for a perfect circle */
+    border-radius: 50%; /* Ensures the image is perfectly circular */
+    position: absolute; /* Position the logo absolutely */
+    left: 20px; /* Adjust as needed to position it */
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Adjust for exact centering */
+    border: 2px solid #fff; /* Optional: adds a border around the logo */
+}
+
+        nav {
+            margin-top: 10px;
+        }
+
+        .nav-button {
+            background-color: #12d0bd;
+            border: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+        .nav-button:hover {
+            background-color: #0ea89a;
+        }
+
+
+        footer {
+    background-color: #504f4f;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 14px;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer input[type="email"] {
+    padding: 8px;
+    margin-right: 10px;
+}
+
+footer button {
+    padding: 8px 16px;
+    background-color: #11caca;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+footer button:hover {
+    background-color: #045357;
+}
+.side-image {
+      position:relative;
+      top: 50%;
+      right: 20px; /* Adjust position as needed */
+      transform: translateY(-2%);
+      width: 500px; /* Increased width */
+      height: 400px;
+      border-radius: 15px; 
+      display: flex;
+      align-items: center;
+      justify-content: center;
+}
+.side-image1{    
+    position:relative;
+      top: 100%;
+      right: 20px; /* Adjust position as needed */
+      transform: translateY(-3%);
+      transform: translateX(150%);
+      width: 500px; /* Increased width */
+      height: 400px;
+      border-radius: 15px; 
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      
+}
+.linear{
+    font-size: 20px;
+      font-weight: bold;
+      background: linear-gradient(to right, #dd06d5, #052ee3, #a3f9f6, #2edef2, rgb(11, 128, 186), rgb(6, 14, 158), rgb(2, 1, 65));
+      -webkit-background-clip: text; /* Clip the background to the text */
+      color: transparent; /* Make text itself transparent */
+      background-clip: text;
+}
+    </style>
+</head>
+<body>
+
+<header>
+    <img src="logo5.jpg" alt="Logo" class="logo">
+    <h1>AI-DRIVEN PERSONALIZED STORY TELLING PLATFORM</h1>
+    <nav>
+        <a href="index.html" class="nav-button" target="_blank">Create</a>
+        <a href="explore.html" class="nav-button" target="_blank">Explore</a>
+        <a href="mystories.html" class="nav-button" target="_blank">my creations</a>
+        <a href="login.html" class="nav-button" target="_blank">Login / Signup</a>
+    </nav>
+</header>
+
+<main>
+    <section align="center" class="linear" >
+        <h2 >Free AI Image Generator</h2>
+       
+        <p><b>Instantly convert words into images with imagiNARRATE AI image generator. Create images without having to draw or photograph anything. Just write a short prompt and convert text to images online. Try now with limited free generations.</b></p>
+       
+    </section>
+   
+    <img src="side.JPG" alt="Side Image" class="side-image">
+    <h1 class="side-image1">here's the example</h1>
+        <img src="ex.JPG" alt="Image" class="side-image1">
+      </div>
+</main>
+
+<footer>
+    <p>&copy; 2024 imagiNARRATE. All rights reserved.</p>
+    <p><a href="/terms-of-service">Terms of Service</a> | <a href="/privacy-policy">Privacy Policy</a></p>
+    <p>Contact us: <a href="mailto:support@imagiNARRATE.com">support@yourwebsite.com</a></p>
+    <p>Follow us: 
+      <button><a href="https://twitter.com/yourprofile" target="_blank">twitter</button></a> | 
+      <button><a href="https://facebook.com/yourprofile" target="_blank">Facebook</a></button> | 
+      <button><a href="https://instagram.com/yourprofile" target="_blank">Instagram</a></button>
+    </p>
+    
+    <p>Powered by DALL.E |  Designed by imagiNARRATE</p>
+  </footer>
+
+</body>
+</html>

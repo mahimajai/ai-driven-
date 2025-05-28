@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Explore</title>
+    <style>
+      body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: rgb(2, 49, 69); /* Set background color to dark navy blue */
+        }
+
+        .explore-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .explore-button {
+            font-weight: bold; /* Make font bolder */
+            font-size: 18px; /* Increase button size */
+            background: linear-gradient(to right, #f200ff, #b300ff, #51c9d9, #0d42ef);  /* Set button color to aqua blue */
+            border: 3px solid #fdf8f8;
+            border-radius: 5px;
+            padding: 15px 30px; /* Increase padding for larger button */
+            margin: 10px;
+            cursor: pointer;
+            text-align: center;
+            color: rgb(0, 44, 86); /* Ensure text is visible on aqua blue background */
+        }
+
+        .explore-button:hover {
+            background: linear-gradient(to right, #99efed, #7bcfee, #05a3c3, #024465);
+        }
+
+        .explore-content {
+            display: none;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center; /* Center images horizontally */
+            margin: 20px;
+        }
+
+        .explore-image {
+            width: 400px;
+            height: 400px;
+            object-fit: cover;
+            margin: 10px;
+            border-radius: 10px;
+        }
+
+        .explore-image:nth-child(4), .explore-image:nth-child(5) {
+            display: none;
+        }
+
+        .explore-button.active {
+            background: linear-gradient(to right, #f24992, #f93cc3, #fb3bf2, #e73155);
+            color: rgb(16, 1, 1);
+        }
+    </style>
+</head>
+<body>
+    <div class="explore-container">
+        <button class="explore-button " onclick="showContent('3D')">3D</button>
+        <button class="explore-button" onclick="showContent('Oil Painting')">Oil Painting</button>
+        <button class="explore-button" onclick="showContent('Hyperrealism')">Hyperrealism</button>
+        <button class="explore-button" onclick="showContent('Cyberpunk')">Cyberpunk</button>
+        <button class="explore-button" onclick="showContent('Picasso')">Picasso</button>
+    </div>
+
+    <div id="3D" class="explore-content">
+
+        <img class="explore-image" src="images1.jpeg" alt="3D Image 1">
+        <img class="explore-image" src="images2.jpeg" alt="3D Image 2">
+        <img class="explore-image" src="images3.jpeg" alt="3D Image 3">
+    </div>
+
+    <div id="Oil Painting" class="explore-content">
+        <img class="explore-image" src="images4.jpeg" alt="3D Image 1">
+        <img class="explore-image" src="images5.jpeg" alt="3D Image 2">
+        <img class="explore-image" src="images6.jpeg" alt="3D Image 3">
+        </div>
+
+    <div id="Hyperrealism" class="explore-content">
+        <img class="explore-image" src="images7.jpeg" alt="3D Image 1">
+        <img class="explore-image" src="images8.jpg" alt="3D Image 2">
+        <img class="explore-image" src="images9.jpeg" alt="3D Image 3">
+        </div>
+
+    <div id="Cyberpunk" class="explore-content">
+        <img class="explore-image" src="images10.jpeg" alt="3D Image 1">
+        <img class="explore-image" src="images11.jpeg" alt="3D Image 2">
+        <img class="explore-image" src="images12.jpg" alt="3D Image 3">
+        </div>
+
+    <div id="Picasso" class="explore-content">
+        <img class="explore-image" src="images13.jpeg" alt="3D Image 1">
+        <img class="explore-image" src="images14.jpeg" alt="3D Image 2">
+        <img class="explore-image" src="images15.jpeg" alt="3D Image 3">
+        </div>
+
+        <script>
+            function showContent(id) {
+                const exploreContent = document.getElementById(id);
+                const exploreButtons = document.querySelectorAll('.explore-button');
+    
+                // Hide all explore content
+                const exploreContents = document.querySelectorAll('.explore-content');
+                for (const content of exploreContents) {
+                    content.style.display = 'none';
+                }
+    
+                // Show the selected explore content
+                exploreContent.style.display = 'flex';
+    
+                // Update button styles
+                for (const button of exploreButtons) {
+                    button.classList.remove('active');
+                }
+                const activeButton = document.querySelector(`.explore-button[onclick="showContent('${id}')"]`);
+                activeButton.classList.add('active');
+            }
+        </script>
+</body>
+</html>
